@@ -16,7 +16,7 @@ namespace SdkTest {
             if (!isRunning) {
                 isRunning = true;
                 button1.Text = "중지";
-                textBox2.Text = "1";
+                textBox2.Text = string.Empty;
                 cancellationTokenSource = new CancellationTokenSource();
 
                 try {
@@ -41,7 +41,11 @@ namespace SdkTest {
 
             for (int i = 2; i <= asdf; i++) {
                 if (await isPrime(i, token)) {
-                    textBox2.AppendText(", " + i.ToString());
+                    if (string.IsNullOrEmpty(textBox2.Text)) {
+                        textBox2.Text = i.ToString();
+                    } else {
+                        textBox2.AppendText(", " + i.ToString());
+                    }
                 }
             }
         }

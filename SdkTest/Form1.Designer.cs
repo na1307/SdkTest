@@ -61,7 +61,6 @@
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox2.Size = new System.Drawing.Size(710, 366);
             this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "1";
             // 
             // button1
             // 
